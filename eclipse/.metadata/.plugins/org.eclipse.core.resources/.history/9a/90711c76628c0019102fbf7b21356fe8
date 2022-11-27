@@ -1,0 +1,130 @@
+package net.minecraft.client.audio;
+
+import java.util.*;
+import com.google.common.collect.*;
+
+public class SoundList
+{
+    private final List field_148577_a;
+    private boolean field_148575_b;
+    private SoundCategory field_148576_c;
+    private static final String __OBFID = "CL_00001121";
+    
+    public SoundList() {
+        this.field_148577_a = Lists.newArrayList();
+    }
+    
+    public List func_148570_a() {
+        return this.field_148577_a;
+    }
+    
+    public boolean func_148574_b() {
+        return this.field_148575_b;
+    }
+    
+    public void func_148572_a(final boolean p_148572_1_) {
+        this.field_148575_b = p_148572_1_;
+    }
+    
+    public SoundCategory func_148573_c() {
+        return this.field_148576_c;
+    }
+    
+    public void func_148571_a(final SoundCategory p_148571_1_) {
+        this.field_148576_c = p_148571_1_;
+    }
+    
+    public static class SoundEntry
+    {
+        private String field_148569_a;
+        private float field_148567_b;
+        private float field_148568_c;
+        private int field_148565_d;
+        private Type field_148566_e;
+        private boolean field_148564_f;
+        private static final String __OBFID = "CL_00001122";
+        
+        public SoundEntry() {
+            this.field_148567_b = 1.0f;
+            this.field_148568_c = 1.0f;
+            this.field_148565_d = 1;
+            this.field_148566_e = Type.FILE;
+            this.field_148564_f = false;
+        }
+        
+        public String func_148556_a() {
+            return this.field_148569_a;
+        }
+        
+        public void func_148561_a(final String p_148561_1_) {
+            this.field_148569_a = p_148561_1_;
+        }
+        
+        public float func_148558_b() {
+            return this.field_148567_b;
+        }
+        
+        public void func_148553_a(final float p_148553_1_) {
+            this.field_148567_b = p_148553_1_;
+        }
+        
+        public float func_148560_c() {
+            return this.field_148568_c;
+        }
+        
+        public void func_148559_b(final float p_148559_1_) {
+            this.field_148568_c = p_148559_1_;
+        }
+        
+        public int func_148555_d() {
+            return this.field_148565_d;
+        }
+        
+        public void func_148554_a(final int p_148554_1_) {
+            this.field_148565_d = p_148554_1_;
+        }
+        
+        public Type func_148563_e() {
+            return this.field_148566_e;
+        }
+        
+        public void func_148562_a(final Type p_148562_1_) {
+            this.field_148566_e = p_148562_1_;
+        }
+        
+        public boolean func_148552_f() {
+            return this.field_148564_f;
+        }
+        
+        public void func_148557_a(final boolean p_148557_1_) {
+            this.field_148564_f = p_148557_1_;
+        }
+        
+        public enum Type
+        {
+            FILE("FILE", 0, "FILE", 0, "file"), 
+            SOUND_EVENT("SOUND_EVENT", 1, "SOUND_EVENT", 1, "event");
+            
+            private final String field_148583_c;
+            private static final Type[] $VALUES;
+            private static final String __OBFID = "CL_00001123";
+            
+            static {
+                $VALUES = new Type[] { Type.FILE, Type.SOUND_EVENT };
+            }
+            
+            private Type(final String s, final int n, final String p_i45109_1_, final int p_i45109_2_, final String p_i45109_3_) {
+                this.field_148583_c = p_i45109_3_;
+            }
+            
+            public static Type func_148580_a(final String p_148580_0_) {
+                for (final Type var4 : values()) {
+                    if (var4.field_148583_c.equals(p_148580_0_)) {
+                        return var4;
+                    }
+                }
+                return null;
+            }
+        }
+    }
+}

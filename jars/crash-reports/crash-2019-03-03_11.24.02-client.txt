@@ -1,0 +1,86 @@
+---- Minecraft Crash Report ----
+// Hey, that tickles! Hehehe!
+
+Time: 03/03/19 11:24
+Description: Registering texture
+
+java.lang.NullPointerException: Registering texture
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:60)
+	at net.minecraft.client.renderer.texture.SimpleTexture.loadTexture(SimpleTexture.java:32)
+	at net.minecraft.client.renderer.texture.TextureManager.loadTexture(TextureManager.java:86)
+	at net.minecraft.client.renderer.texture.TextureManager.bindTexture(TextureManager.java:42)
+	at net.minecraft.client.gui.GuiIngame.renderGameOverlay(GuiIngame.java:126)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1151)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1073)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:969)
+	at net.minecraft.client.main.Main.main(Main.java:161)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:60)
+	at net.minecraft.client.renderer.texture.SimpleTexture.loadTexture(SimpleTexture.java:32)
+
+-- Resource location being registered --
+Details:
+	Resource location: ~~NULL~~
+	Texture object class: net.minecraft.client.renderer.texture.SimpleTexture
+Stacktrace:
+	at net.minecraft.client.renderer.texture.TextureManager.loadTexture(TextureManager.java:86)
+	at net.minecraft.client.renderer.texture.TextureManager.bindTexture(TextureManager.java:42)
+	at net.minecraft.client.gui.GuiIngame.renderGameOverlay(GuiIngame.java:126)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player509'/172, l='MpServer', x=570,30, y=66,62, z=161,30]]
+	Chunk stats: MultiplayerChunkCache: 25, 25
+	Level seed: 0
+	Level generator: ID 02 - largeBiomes, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (584,64,166), Chunk: (at 8,4,6 in 36,10; contains blocks 576,0,160 to 591,255,175), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Level time: 16161 game time, 15541 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 37 total; [EntityZombie['Zombie'/69, l='MpServer', x=557,50, y=50,00, z=171,91], EntityBat['Bat'/70, l='MpServer', x=558,06, y=50,41, z=173,31], EntitySkeleton['Skeleton'/71, l='MpServer', x=556,38, y=52,00, z=187,50], EntitySkeleton['Skeleton'/72, l='MpServer', x=552,50, y=66,00, z=197,50], EntitySpider['Spider'/79, l='MpServer', x=575,47, y=50,00, z=143,63], EntitySpider['Spider'/80, l='MpServer', x=574,22, y=40,00, z=157,00], EntityCreeper['Creeper'/81, l='MpServer', x=571,03, y=39,00, z=159,50], EntityZombie['Zombie'/82, l='MpServer', x=565,97, y=39,00, z=159,50], EntityBat['Bat'/83, l='MpServer', x=573,34, y=41,16, z=157,44], EntityBat['Bat'/84, l='MpServer', x=569,75, y=41,09, z=161,41], EntityZombie['Zombie'/85, l='MpServer', x=561,31, y=38,00, z=164,50], EntityZombie['Zombie'/86, l='MpServer', x=568,47, y=40,00, z=175,03], EntityCreeper['Creeper'/87, l='MpServer', x=562,00, y=38,00, z=165,50], EntityCreeper['Creeper'/88, l='MpServer', x=567,41, y=38,00, z=160,41], EntityZombie['Zombie'/89, l='MpServer', x=573,09, y=63,00, z=164,13], EntityItem['item.item.potion'/90, l='MpServer', x=572,06, y=65,13, z=161,22], EntityBat['Bat'/95, l='MpServer', x=586,75, y=59,09, z=138,75], EntityBat['Bat'/96, l='MpServer', x=580,75, y=55,09, z=135,72], EntitySpider['Spider'/97, l='MpServer', x=584,38, y=70,00, z=133,38], EntitySpider['Spider'/98, l='MpServer', x=583,00, y=70,00, z=135,13], EntitySkeleton['Skeleton'/99, l='MpServer', x=581,06, y=43,00, z=157,50], EntitySpider['Spider'/100, l='MpServer', x=576,41, y=27,00, z=163,53], EntityBat['Bat'/101, l='MpServer', x=586,25, y=45,09, z=163,75], EntityCreeper['Creeper'/102, l='MpServer', x=581,56, y=45,00, z=164,97], EntitySkeleton['Skeleton'/103, l='MpServer', x=582,91, y=37,00, z=167,94], EntityZombie['Zombie'/104, l='MpServer', x=584,50, y=27,00, z=195,50], EntityClientPlayerMP['Player509'/172, l='MpServer', x=570,30, y=66,62, z=161,30], EntityCreeper['Creeper'/111, l='MpServer', x=593,50, y=54,00, z=189,50], EntitySkeleton['Skeleton'/112, l='MpServer', x=600,50, y=54,00, z=190,50], EntityCreeper['Creeper'/113, l='MpServer', x=606,53, y=52,00, z=184,03], EntityZombie['Zombie'/55, l='MpServer', x=531,50, y=23,00, z=131,50], EntityZombie['Zombie'/56, l='MpServer', x=532,94, y=22,00, z=130,41], EntitySquid['Squid'/57, l='MpServer', x=542,44, y=50,81, z=136,66], EntitySquid['Squid'/58, l='MpServer', x=543,72, y=53,13, z=139,03], EntityCreeper['Creeper'/59, l='MpServer', x=533,56, y=34,00, z=175,00], EntityBat['Bat'/60, l='MpServer', x=539,84, y=56,00, z=182,41], EntityBat['Bat'/61, l='MpServer', x=533,25, y=28,09, z=201,50]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:406)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2660)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:991)
+	at net.minecraft.client.main.Main.main(Main.java:161)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_191, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 758314248 bytes (723 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 102
+	Launched Version: mcp
+	LWJGL: 2.9.1
+	OpenGL: Intel(R) HD Graphics 4000 GL version 4.0.0 - Build 10.18.10.4653, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

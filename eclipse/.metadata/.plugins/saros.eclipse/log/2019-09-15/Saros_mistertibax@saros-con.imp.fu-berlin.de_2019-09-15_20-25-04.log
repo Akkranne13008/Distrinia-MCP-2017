@@ -1,0 +1,12 @@
+INFO  20:24:37,844 [StunDiscovery-10.0.4.10] (StunServiceImpl.java:384) Starting Saros 15.0.0 running:
+  Java Version: 1.8.0_201
+  Java Vendor: Oracle Corporation
+  Eclipse Runtime Version: 3.15.200.v20190301-1641
+  Operating System: Windows 10 (10.0)
+  Hardware Architecture: amd64
+INFO  20:24:37,899 [StunDiscovery-10.0.4.10] (StunServiceImpl.java:384) initializing context...
+INFO  20:24:38,703 [StunDiscovery-10.0.4.10] (StunServiceImpl.java:384) initializing preference default values
+INFO  20:24:38,794 [StunDiscovery-10.0.4.10] (StunServiceImpl.java:384) successfully initialized context
+WARN  20:25:04,557 [StunDiscovery-10.0.4.10] (StunServiceImpl.java:384) received no response from STUN server stunserver.org/67.227.226.240:3478 at local address /10.0.4.10:0
+INFO  21:40:41,923 [dpp-shutdown] (ContainerContext.java:209) disposing context...
+INFO  21:40:41,925 [dpp-shutdown] (ContainerContext.java:213) successfully disposed context

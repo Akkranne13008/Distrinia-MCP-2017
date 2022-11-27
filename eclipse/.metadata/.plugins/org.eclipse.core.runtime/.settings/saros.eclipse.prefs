@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+saros.coloridsets=<list>\n  <colorIDSet>\n    <assignedUserColorIDs>\n      <entry>\n        <string>shutdoweed@saros-con.imp.fu-berlin.de</string>\n        <saros.editor.colorstorage.UserColorID>\n          <current>1</current>\n          <favorite>-1</favorite>\n        </saros.editor.colorstorage.UserColorID>\n      </entry>\n      <entry>\n        <string>mistertibax@saros-con.imp.fu-berlin.de</string>\n        <saros.editor.colorstorage.UserColorID>\n          <current>0</current>\n          <favorite>-1</favorite>\n        </saros.editor.colorstorage.UserColorID>\n      </entry>\n    </assignedUserColorIDs>\n    <timestamp>1568493800122</timestamp>\n  </colorIDSet>\n</list>
+ui.sarosview.sashweight.left=500
+ui.sarosview.sashweight.right=500
